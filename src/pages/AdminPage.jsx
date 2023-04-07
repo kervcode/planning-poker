@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
+import { auth } from '../Firebase/firebase';
 import '../styles/AdminPage.css';
 
 function AdminPage() {

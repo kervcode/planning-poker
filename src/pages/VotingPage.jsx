@@ -56,6 +56,24 @@ function VotingPage() {
           >
             13
           </button>
+          <button
+            className={`card-value ${selectedValue === '20' ? 'selected' : ''}`}
+            onClick={() => handleCardSelection('20')}
+          >
+            20
+          </button>
+          <button
+            className={`card-value ${selectedValue === '40' ? 'selected' : ''}`}
+            onClick={() => handleCardSelection('40')}
+          >
+            40
+          </button>
+          <button
+            className={`card-value ${selectedValue === '100' ? 'selected' : ''}`}
+            onClick={() => handleCardSelection('100')}
+          >
+            100
+          </button>
         </div>
         <button className="vote-button" onClick={handleVote} disabled={!selectedValue}>
           Vote
