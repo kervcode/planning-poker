@@ -1,0 +1,45 @@
+.header {
+    background-color: rgba(33, 31, 28, .75);
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.wrapper{
+    margin: 0 auto;
+    min-width: 496px;
+    max-width: 1280px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 15px 40px;
+}
+
+.list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.listItem {
+    padding-left: 40px;
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.3rem;     
+}
+
+.menu a:hover, .menu a:focus{
+    /* text-decoration: underline; */
+    font-size: 1.05rem;
+}
+
+.choice {
+    color:
+}
