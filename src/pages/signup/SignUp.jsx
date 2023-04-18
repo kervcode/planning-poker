@@ -1,7 +1,7 @@
-import "../index.css";
+import "../../index.css";
 import React, {useState} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useSignup } from "../hooks/useSignup";
+import { useSignup } from "../../hooks/useSignup";
  
 const Signup = () => {
     const navigate = useNavigate();
@@ -10,6 +10,7 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { error, signup} = useSignup();
+  
    
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -19,7 +20,7 @@ const Signup = () => {
     return (
       <div className="container">
         <form className="login-form" onSubmit={handleSubmit}>
-          <h2>Login</h2>
+          <h2>Sign up</h2>
 
           <label>
             <span>email:</span>
@@ -37,7 +38,7 @@ const Signup = () => {
               value={password}
               />            
           </label>
-          <button className='btn'>Login</button>
+          <button className='btn'>Sign up</button>
           {error && <p>{error}</p>}
         </form>
       </div>

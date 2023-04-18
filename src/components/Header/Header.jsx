@@ -1,28 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css';
+import React from "react";
+import { useLogout } from "../../hooks/useLogout";
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 
-export default function 
-() {
-  return (
-    <div className='header'> 
-        <div className="wrapper">
-            <div className="logo">
-                <Link to="/">
-                    Planning Poker
-                    <img src="" alt="" />
-                </Link>
-            </div>
+export default function () {
+	const { logout } = useLogout();
 
-            <div className="menu">
-                <Link to="/vote" className="listItem">
-                    Voter
-                </Link>
-                <Link to="/signup" className="listItem">
-                    Admin
-                </Link>
-            </div>
-        </div>        
-    </div>
-  )
+	return (
+		<div className='header'>
+			<div className="wrapper">
+				<div className="logo">
+					<NavLink to="/">
+						Planning Poker
+						<img src="" alt="" />
+					</NavLink>
+				</div>
+
+				<div className="menu">
+					<NavLink to="/vote" className="listItem">
+						Voter
+					</NavLink>
+					<NavLink to="/admin" className="listItem">
+						Admin
+					</NavLink>
+					<NavLink to="/login" className="listItem" onClick={logout}>
+						Logout
+					</NavLink>
+				</div>
+			</div>
+		</div>
+	);
 }

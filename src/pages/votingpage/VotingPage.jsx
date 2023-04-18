@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/VotingPage.css';
+import './VotingPage.css';
 
 function VotingPage() {
   const [selectedValue, setSelectedValue] = useState('');
