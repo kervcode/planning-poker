@@ -1,10 +1,13 @@
 import "../../index.css";
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSignup } from "../../hooks/useSignup";
  
-const Signup = () => {
+const Signup = ({user}) => {
     const navigate = useNavigate();
+    const emailRef = useRef();
+
+    console.log("SignedUP: ", user)
 
 
     const [email, setEmail] = useState('');
@@ -15,6 +18,7 @@ const Signup = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       signup(email, password);
+      navigate("/confirmed", { state: {email: useRef.current.email}})
     }
   
     return (

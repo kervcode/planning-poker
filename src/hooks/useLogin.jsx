@@ -17,7 +17,7 @@ export const useLogin = () => {
 			.then((res) => {
 				dispatch({ type: "LOGIN", payload: res.user });
 				console.log("user signup:", res.user);
-                navigate("/admin")
+                // navigate("/admin")
 			})
 			.catch((err) => {
 				setError(err.message);

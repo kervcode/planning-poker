@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css';
+
 // import cards from '../../images/cards.jpg';
 // import bg from '../../images/mitchell-luo-xREzOtWzDrQ-unsplash.jpg'
 
@@ -22,7 +22,7 @@ function HomePage() {
             <Link to="/vote" className="button">
                 Voter
             </Link>
-            <Link to="/login" className="button">
+            <Link to="/admin" className="button">
                 Admin
             </Link>
           </div>

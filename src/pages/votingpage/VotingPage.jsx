@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './VotingPage.css';
+import "../../App.css";
 
 function VotingPage() {
   const [selectedValue, setSelectedValue] = useState('');
@@ -19,6 +19,7 @@ function VotingPage() {
     <div className="container">
       <div className="card">
         <h2>Vote</h2>
+        <h3>Move customer data to S3 bucket</h3>
         <div className="card-selection">
           <button
             className={`card-value ${selectedValue === '1' ? 'selected' : ''}`}

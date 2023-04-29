@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useLogin } from "../../hooks/useLogin";
-import "./LoginPage.css";
 
 function LoginPage() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-  const { error, login } = useLogin();
+  	const { error, login } = useLogin();
+  	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -33,9 +34,10 @@ function LoginPage() {
 					/>
 				</label>
 				<button className='btn'>Login</button>
-        {
-          error && <p>{error}</p>
-        }
+				<button className='btn' onClick={() => navigate("/signup")}>Sign up</button>
+				{
+					error && <p>{error}</p>
+				}
 			</form>
 		</div>
 	);
